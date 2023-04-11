@@ -1,15 +1,21 @@
 const mongoose = require("mongoose");
 const schoolSchema = new mongoose.Schema(
   {
-    name: {
+    id: {
       type: String,
-      required: true,
     },
-    location: {
+    icons: {
       type: String,
+    },
+    navbartitle: {
+      type: String,
+    },
+    userstatus: {
+      type: Boolean,
       required: true,
     },
   },
   { versionKey: false }
 );
 module.exports = mongoose.model("school", schoolSchema);
+// name,location first there and changed
